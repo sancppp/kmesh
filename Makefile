@@ -220,6 +220,15 @@ test:
 	./hack/run-ut.sh --local
 endif
 
+.PHONY: ebpf_unit_test
+ifeq ($(RUN_IN_CONTAINER),1)
+ebpf_unit_test:
+	./hack/run-ebpf-ut.sh --docker
+else
+ebpf_unit_test:
+	./hack/run-ebpf-ut.sh --local
+endif
+
 UPDATE_VERSION ?= ${VERSION}
 .PHONY: update-version
 update-version:

@@ -1,5 +1,6 @@
-CFLAGS += -g3 -Wall -fPIC -I. -D__TARGET_ARCH_x86_64 -D__x86_64__ -D_GNU_SOURCE
+CFLAGS += -g3 -Wall -fPIC -I. -D__TARGET_ARCH_x86_64 -D__x86_64__ -D_GNU_SOURCE 
 CFLAGS += -isystem /usr/include
+CFLAGS += -DKERNEL_VERSION_HIGHER_5_13_0=1 -I../workload/include -I../../include -I../../../api/v2-c
 LIBS = bpf
 
 WORKLOAD_DIR = ../../../bpf/kmesh/workload

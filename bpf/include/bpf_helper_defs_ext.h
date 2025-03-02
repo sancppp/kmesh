@@ -43,4 +43,4 @@ static long (*bpf_km_header_strncmp)(const char *key, int key_sz, const char *ta
  *      A HTTP PROTO TYPE is returned on success.
  *      **PROTO_UNKNOW** is returned if failure.
  */
-static long (*bpf_parse_header_msg)(struct bpf_sock_addr *ctx) = (void *)165;
+static long (*bpf_parse_header_msg)(struct bpf_sock_addr *ctx) = (void *);
